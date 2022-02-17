@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../components/default_button.dart';
 import '../../../constant.dart';
 import '../../../size_config.dart';
+import '../../sign_in/sign_in_screen.dart';
 import 'splash_content.dart';
 
 class Body extends StatefulWidget {
@@ -72,7 +73,9 @@ class _BodyState extends State<Body> {
                     height: getProportionateScreenHeight(56),
                     child: DefaultButton(
                       text: 'CONTINUE',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, SignInScreen.routeName);
+                      },
                     ),
                   ),
                   const Spacer(),

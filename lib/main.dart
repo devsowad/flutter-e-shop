@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'routes.dart';
 import 'screens/splash/splash_screen.dart';
 import 'theme_data.dart';
 
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: themeData(),
-      home: const SplashScreen(),
+      routes: routes,
+      initialRoute: SplashScreen.routeName,
     );
   }
 }
