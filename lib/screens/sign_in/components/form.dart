@@ -6,6 +6,7 @@ import '../../../components/labeled_checkbox.dart';
 import '../../../components/suffix_icon.dart';
 import '../../../size_config.dart';
 import '../../forgot_password/forgot_password_screen.dart';
+import '../../login_success/login_success_screen.dart';
 
 class SignInForm extends StatefulWidget {
   const SignInForm({Key? key}) : super(key: key);
@@ -54,7 +55,11 @@ class _SignInFormState extends State<SignInForm> {
           text: 'CONTINUE',
           onPressed: () {
             if (_formKey.currentState!.validate()) {
-              _formKey.currentState!.save();
+              // _formKey.currentState!.save();
+              Navigator.pushReplacementNamed(
+                context,
+                LoginSuccessScreen.routeName,
+              );
             }
           },
         ),
