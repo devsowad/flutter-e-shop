@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../constant.dart';
-import '../screens/sign_up/sign_up_screen.dart';
+import '../screens/sign_in/sign_in_screen.dart';
 import '../size_config.dart';
 
-class NoAccount extends StatelessWidget {
-  const NoAccount({
+class HasAccount extends StatelessWidget {
+  const HasAccount({
     Key? key,
   }) : super(key: key);
 
@@ -15,15 +15,15 @@ class NoAccount extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "Don't have an account? ",
+          "Already have an account? ",
           style: TextStyle(fontSize: getProportionateScreenWidth(16)),
         ),
         InkWell(
           onTap: () {
-            Navigator.pushNamed(context, SignUpScreen.routeName);
+            Navigator.pushNamed(context, SignInScreen.routeName);
           },
           child: Text(
-            'Sign Up',
+            'Sign In',
             style: TextStyle(
               color: kPrimaryColor,
               fontSize: getProportionateScreenWidth(16),
