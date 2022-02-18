@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../../size_config.dart';
 import 'components/body.dart';
 
-class SignInScreen extends StatelessWidget {
-  const SignInScreen({Key? key}) : super(key: key);
-  static String routeName = "/sign_in";
+class ForgotPasswordScreen extends StatelessWidget {
+  const ForgotPasswordScreen({Key? key}) : super(key: key);
+  static String routeName = '/forgot_password';
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class SignInScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Sign In',
+          'Forgot Password',
           style: Theme.of(context).textTheme.headline6,
         ),
       ),

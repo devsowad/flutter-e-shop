@@ -14,8 +14,6 @@ class DefaultButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
-
     return SizedBox(
       width: double.infinity,
       height: getProportionateScreenHeight(56),

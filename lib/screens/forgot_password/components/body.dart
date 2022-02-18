@@ -1,11 +1,9 @@
-import 'package:e_shop/constant.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/account_screen_header.dart';
 import '../../../components/no_account.dart';
-import '../../../components/social_icon.dart';
 import '../../../size_config.dart';
-import 'form.dart';
+import 'forgot_pass_form.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -22,20 +20,12 @@ class Body extends StatelessWidget {
             child: Column(
               children: [
                 const AuthScreenHeader(
-                  title: 'Welcome Back',
+                  title: 'Forgot Password',
                   description:
-                      'Sign in with your email and password \nor continue with your social media account',
+                      'Enter your email address and we will send \nyou a link to reset your password',
                 ),
-                const SignInForm(),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    SocialIcon(svgSrc: 'assets/icons/google.svg'),
-                    SocialIcon(svgSrc: 'assets/icons/facebook_2.svg'),
-                    SocialIcon(svgSrc: 'assets/icons/twitter.svg'),
-                  ],
-                ),
+                const ForgotPassForm(),
                 SizedBox(height: getProportionateScreenWidth(10)),
                 const NoAccount(),
               ],

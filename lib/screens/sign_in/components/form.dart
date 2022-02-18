@@ -5,6 +5,7 @@ import '../../../components/default_button.dart';
 import '../../../components/labeled_checkbox.dart';
 import '../../../components/suffix_icon.dart';
 import '../../../size_config.dart';
+import '../../forgot_password/forgot_password_screen.dart';
 
 class SignInForm extends StatefulWidget {
   const SignInForm({Key? key}) : super(key: key);
@@ -37,7 +38,9 @@ class _SignInFormState extends State<SignInForm> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, ForgotPasswordScreen.routeName);
+              },
               child: const Text(
                 'Forgot Password?',
                 textAlign: TextAlign.right,
