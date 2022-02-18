@@ -16,20 +16,24 @@ class DefaultButton extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
 
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ButtonStyle(
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
+    return SizedBox(
+      width: double.infinity,
+      height: getProportionateScreenHeight(56),
+      child: ElevatedButton(
+        onPressed: onPressed,
+        style: ButtonStyle(
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
           ),
         ),
-      ),
-      child: Text(
-        text,
-        style: TextStyle(
-          fontSize: getProportionateScreenWidth(18),
-          color: Colors.white,
+        child: Text(
+          text,
+          style: TextStyle(
+            fontSize: getProportionateScreenWidth(18),
+            color: Colors.white,
+          ),
         ),
       ),
     );

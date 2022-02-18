@@ -9,8 +9,45 @@ ThemeData themeData() {
     fontFamily: 'Muli',
     appBarTheme: appBarThemeData(),
     textTheme: textThemeData(),
+    inputDecorationTheme: inputDecorationTheme(),
     elevatedButtonTheme: elevatedButtonThemeData(),
     visualDensity: VisualDensity.adaptivePlatformDensity,
+    colorScheme: ThemeData().colorScheme.copyWith(
+          primary: kPrimaryColor,
+          secondary: kSecondaryColor,
+        ),
+    checkboxTheme: CheckboxThemeData(
+      fillColor: MaterialStateProperty.all<Color>(kPrimaryColor),
+    ),
+  );
+}
+
+InputDecorationTheme inputDecorationTheme() {
+  OutlineInputBorder outlineInputBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(28),
+    borderSide: const BorderSide(color: kTextColor),
+    gapPadding: 10,
+  );
+
+  OutlineInputBorder outlineFocusedInputBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(28),
+    borderSide: const BorderSide(color: kPrimaryColor),
+    gapPadding: 10,
+  );
+
+  OutlineInputBorder outlineErrorInputBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(28),
+    borderSide: const BorderSide(color: kErrorColor),
+    gapPadding: 10,
+  );
+
+  return InputDecorationTheme(
+    floatingLabelBehavior: FloatingLabelBehavior.always,
+    contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
+    enabledBorder: outlineInputBorder,
+    focusedBorder: outlineFocusedInputBorder,
+    errorBorder: outlineErrorInputBorder,
+    focusedErrorBorder: outlineErrorInputBorder,
   );
 }
 

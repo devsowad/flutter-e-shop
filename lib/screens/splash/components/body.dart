@@ -68,15 +68,11 @@ class _BodyState extends State<Body> {
                     ),
                   ),
                   const Spacer(flex: 3),
-                  SizedBox(
-                    width: double.infinity,
-                    height: getProportionateScreenHeight(56),
-                    child: DefaultButton(
-                      text: 'CONTINUE',
-                      onPressed: () {
-                        Navigator.pushNamed(context, SignInScreen.routeName);
-                      },
-                    ),
+                  DefaultButton(
+                    text: 'CONTINUE',
+                    onPressed: () {
+                      Navigator.pushNamed(context, SignInScreen.routeName);
+                    },
                   ),
                   const Spacer(),
                 ],
