@@ -4,6 +4,7 @@ import 'package:form_validator/form_validator.dart';
 import '../../../components/default_button.dart';
 import '../../../components/suffix_icon.dart';
 import '../../../size_config.dart';
+import '../../complete_profile/complete_profile_screen.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({Key? key}) : super(key: key);
@@ -32,10 +33,10 @@ class _SignUpFormState extends State<SignUpForm> {
           onPressed: () {
             // _formKey.currentState!.save();
             if (_formKey.currentState!.validate()) {
-              // Navigator.pushReplacementNamed(
-              //   context,
-              //   LoginSuccessScreen.routeName,
-              // );
+              Navigator.pushReplacementNamed(
+                context,
+                CompleteProfileScreen.routeName,
+              );
             }
           },
         ),
