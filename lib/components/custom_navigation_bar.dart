@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../constant.dart';
 import '../enums.dart';
+import '../screens/home/home_screen.dart';
 import '../screens/profile/profile_screen.dart';
 
 class CustomNavigationBar extends StatelessWidget {
@@ -40,7 +41,9 @@ class CustomNavigationBar extends StatelessWidget {
             buildIconButton(
               svgSrc: 'assets/icons/shop_icon.svg',
               menuState: MenuState.home,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+              },
             ),
             buildIconButton(
               svgSrc: 'assets/icons/heart_icon.svg',

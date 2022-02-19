@@ -1,4 +1,3 @@
-import 'package:e_shop/size_config.dart';
 import 'package:flutter/material.dart';
 
 import '../../models/products.dart';

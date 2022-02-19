@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../components/custom_navigation_bar.dart';
-import '../../constant.dart';
 import '../../enums.dart';
 import 'components/body.dart';
 
@@ -12,13 +10,9 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Profile"),
-      ),
-      body: const Body(),
-      bottomNavigationBar:
-          const CustomNavigationBar(selectedMenu: MenuState.profile),
+    return const Scaffold(
+      body: Body(),
+      bottomNavigationBar: CustomNavigationBar(selectedMenu: MenuState.profile),
     );
   }
 }
