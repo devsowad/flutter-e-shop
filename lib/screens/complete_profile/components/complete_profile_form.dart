@@ -4,6 +4,7 @@ import 'package:form_validator/form_validator.dart';
 import '../../../components/default_button.dart';
 import '../../../components/suffix_icon.dart';
 import '../../../size_config.dart';
+import '../../otp/otp_screen.dart';
 
 class CompleteProfileForm extends StatefulWidget {
   const CompleteProfileForm({Key? key}) : super(key: key);
@@ -34,10 +35,10 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
           onPressed: () {
             // _formKey.currentState!.save();
             if (_formKey.currentState!.validate()) {
-              // Navigator.pushReplacementNamed(
-              //   context,
-              //   CompleteProfileScreen.routeName,
-              // );
+              Navigator.pushReplacementNamed(
+                context,
+                OtpScreen.routeName,
+              );
             }
           },
         ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../components/account_screen_header.dart';
+import '../../../components/auth_screen_header.dart';
 import '../../../components/has_account.dart';
 import '../../../components/social_icon.dart';
 import '../../../size_config.dart';

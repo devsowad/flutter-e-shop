@@ -7,9 +7,11 @@ class AuthScreenHeader extends StatelessWidget {
     Key? key,
     required this.title,
     required this.description,
+    this.disableMargin = false,
   }) : super(key: key);
 
   final String title, description;
+  final bool disableMargin;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class AuthScreenHeader extends StatelessWidget {
           description,
           textAlign: TextAlign.center,
         ),
-        SizedBox(height: SizeConfig.screenHeight * 0.08),
+        if (!disableMargin) SizedBox(height: SizeConfig.screenHeight * 0.08),
       ],
     );
   }

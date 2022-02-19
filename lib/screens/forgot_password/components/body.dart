@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../components/account_screen_header.dart';
+import '../../../components/auth_screen_header.dart';
 import '../../../components/no_account.dart';
 import '../../../size_config.dart';
 import 'forgot_pass_form.dart';
