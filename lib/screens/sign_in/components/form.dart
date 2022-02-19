@@ -30,22 +30,23 @@ class _SignInFormState extends State<SignInForm> {
         buildPasswordFormField(),
         SizedBox(height: getProportionateScreenWidth(20)),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Expanded(
-              child: LabeledCheckbox(
-                label: 'Remember me',
-                value: isSelected,
-                onChanged: (value) => setState(() => isSelected = value),
-              ),
+            LabeledCheckbox(
+              label: 'Remember me',
+              value: isSelected,
+              onChanged: (value) => setState(() => isSelected = value),
             ),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, ForgotPasswordScreen.routeName);
-              },
-              child: const Text(
-                'Forgot Password?',
-                textAlign: TextAlign.right,
-                style: TextStyle(decoration: TextDecoration.underline),
+            Flexible(
+              child: InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, ForgotPasswordScreen.routeName);
+                },
+                child: const Text(
+                  'Forgot Password?',
+                  textAlign: TextAlign.right,
+                  style: TextStyle(decoration: TextDecoration.underline),
+                ),
               ),
             ),
           ],

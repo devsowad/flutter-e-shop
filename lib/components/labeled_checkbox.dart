@@ -18,19 +18,16 @@ class LabeledCheckbox extends StatelessWidget {
       onTap: () {
         onChanged(!value);
       },
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Row(
-          children: <Widget>[
-            Checkbox(
-              value: value,
-              onChanged: (bool? newValue) {
-                onChanged(newValue!);
-              },
-            ),
-            Text(label),
-          ],
-        ),
+      child: Row(
+        children: <Widget>[
+          Checkbox(
+            value: value,
+            onChanged: (bool? newValue) {
+              onChanged(newValue!);
+            },
+          ),
+          Text(label),
+        ],
       ),
     );
   }
