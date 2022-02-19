@@ -1,4 +1,5 @@
 import 'package:badges/badges.dart';
+import 'package:e_shop/screens/cart/cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -48,7 +49,9 @@ class Header extends StatelessWidget {
             backgroundColor: kSecondaryColor.withOpacity(0.1),
             radius: getProportionateScreenWidth(25),
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, CartScreen.routeName);
+              },
               icon: SvgPicture.asset('assets/icons/cart_icon.svg'),
             ),
           ),

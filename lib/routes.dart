@@ -1,3 +1,4 @@
+import 'package:e_shop/screens/cart/cart_screen.dart';
 import 'package:e_shop/screens/home/home_screen.dart';
 import 'package:flutter/widgets.dart';
 
@@ -20,4 +21,5 @@ final Map<String, WidgetBuilder> routes = {
   OtpScreen.routeName: (context) => const OtpScreen(),
   HomeScreen.routeName: (context) => const HomeScreen(),
   DetailsScreen.routeName: (context) => const DetailsScreen(),
+  CartScreen.routeName: (context) => const CartScreen(),
 };
