@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../constant.dart';
 import '../../../models/products.dart';
 import '../../../size_config.dart';
+import '../../details/details_screen.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({
@@ -24,11 +25,11 @@ class ProductCard extends StatelessWidget {
         width: getProportionateScreenWidth(width),
         child: InkWell(
           onTap: () => {
-            // Navigator.pushNamed(
-            //   context,
-            //   DetailsScreen.routeName,
-            //   arguments: ProductDetailsArguments(product: product),
-            // )
+            Navigator.pushNamed(
+              context,
+              DetailsScreen.routeName,
+              arguments: ProductDetailsArguments(product: product),
+            )
           },
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
