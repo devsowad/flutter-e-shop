@@ -1,3 +1,4 @@
+import 'package:e_shop/screens/home/home_screen.dart';
 import 'package:flutter/widgets.dart';
 
 import 'screens/complete_profile/complete_profile_screen.dart';
@@ -16,4 +17,5 @@ final Map<String, WidgetBuilder> routes = {
   SignUpScreen.routeName: (context) => const SignUpScreen(),
   CompleteProfileScreen.routeName: (context) => const CompleteProfileScreen(),
   OtpScreen.routeName: (context) => const OtpScreen(),
+  HomeScreen.routeName: (context) => const HomeScreen(),
 };

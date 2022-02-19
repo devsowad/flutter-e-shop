@@ -1,3 +1,4 @@
+import 'package:e_shop/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/default_button.dart';
@@ -29,7 +30,11 @@ class Body extends StatelessWidget {
           Padding(
             padding:
                 EdgeInsets.symmetric(horizontal: SizeConfig.screenHeight * 0.1),
-            child: DefaultButton(text: 'go to home', onPressed: () {}),
+            child: DefaultButton(
+                text: 'go to home',
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+                }),
           ),
           const Spacer(),
         ],

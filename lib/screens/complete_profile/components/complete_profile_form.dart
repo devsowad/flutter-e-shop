@@ -35,7 +35,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
           onPressed: () {
             // _formKey.currentState!.save();
             if (_formKey.currentState!.validate()) {
-              Navigator.pushReplacementNamed(
+              Navigator.pushNamed(
                 context,
                 OtpScreen.routeName,
               );

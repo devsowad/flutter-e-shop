@@ -33,7 +33,7 @@ class _SignUpFormState extends State<SignUpForm> {
           onPressed: () {
             // _formKey.currentState!.save();
             if (_formKey.currentState!.validate()) {
-              Navigator.pushReplacementNamed(
+              Navigator.pushNamed(
                 context,
                 CompleteProfileScreen.routeName,
               );
